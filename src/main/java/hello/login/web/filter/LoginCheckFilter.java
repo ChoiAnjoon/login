@@ -34,7 +34,7 @@ public class LoginCheckFilter implements Filter {
 
                     //로그인으로 redirect
                     httpResponse.sendRedirect("/login?redirectURL=" + requestURI);
-                    return;
+                    return; // 미인증 사용자는 다음으로 진행하지 않고 여기서 끝!
                 }
             }
 

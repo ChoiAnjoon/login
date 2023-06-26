@@ -46,7 +46,7 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        // 로그인 성공 처리 TODO
+        // 로그인 성공 처리
 
         // 쿠키에 시간 정보를 주지 않으면 세션 쿠키(브라우저 종료시 모두 종료)
         Cookie idCookie = new Cookie("memberId", String.valueOf(loginMember.getId()));
@@ -69,7 +69,7 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        // 로그인 성공 처리 TODO
+        // 로그인 성공 처리
 
         // 세션 관리자를 통해 세션을 생성하고, 회원 데이터를 보관
         sessionManager.createSession(loginMember, response);
@@ -91,7 +91,7 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        // 로그인 성공 처리 TODO
+        // 로그인 성공 처리
 
         // 세션이 있으면 있는 세션 반환, 없으면 신규 세션 반환
         HttpSession session = request.getSession();
@@ -118,7 +118,7 @@ public class LoginController {
             return "login/loginForm";
         }
 
-        // 로그인 성공 처리 TODO
+        // 로그인 성공 처리
 
         // 세션이 있으면 있는 세션 반환, 없으면 신규 세션 반환
         HttpSession session = request.getSession();
