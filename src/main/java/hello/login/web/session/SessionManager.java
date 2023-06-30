@@ -23,6 +23,9 @@ public class SessionManager {
 
     /**
      * 세션 생성
+     * sessionId 생성 (임의의 추정 불가능한 랜덤 값)
+     * 세션 저장소에 sessionId와 보관할 값 저장
+     * sessionId로 응답 쿠키를 생성해서 클라이언트에 전달
      */
     public void createSession(Object value, HttpServletResponse response) {
 
@@ -75,6 +78,8 @@ public class SessionManager {
                 .filter(cookie -> cookie.getName().equals(cookieName))
                 .findAny()
                 .orElse(null);
+        // findAny() -> 순서와 상관없이 빨리 나온애 찾아줌
+        // findAny의 쿠기가 있으면 찾은 쿠키 반환 없으면 null 반환
     }
 
 

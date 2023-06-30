@@ -50,10 +50,9 @@ public class HomeController {
 //    @GetMapping("/")
     public String homeLoginV2(HttpServletRequest request, Model model) {
 
-        // 세션 관리자에 저장된 회원 정보 조회
+        // 세션 관리자에 저장된 회원 정보 조회 (member 객체가 있으면 로그인, null 이면 로그인X)
         Member member = (Member) sessionManager.getSession(request);
 
-        // 로그인
         if (member == null) {
             return "home";
         }
