@@ -129,6 +129,7 @@ public class LoginController {
         return "redirect:" + redirectURL; // filter 추가하고 좀더 편의해지게 바꿈
     }
 
+//    /logout은 post로 처리되어 있음을 loginHome.html 확인 요망
 //    @PostMapping("/logout")
     public String logout(HttpServletResponse response) {
         expireCookie(response, "memberId");

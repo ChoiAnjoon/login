@@ -18,14 +18,17 @@ public class LoginService {
      */
     public Member login(String loginId, String password) {
 //        Optional<Member> findMemberOptional = memberRepository.findByLoginId(loginId);
-//        Member member = findMemberOptional.get();
+//        Member member = findMemberOptional.get(); // get 말고 다른것으로 꺼내는 것이 좋음 (optional 공부 필요)
 //        if (member.getPassword().equals(password)) {
 //            return member;
 //        } else {
 //            return null;
 //        }
 
-        return memberRepository.findByLoginId(loginId)
+//        Optional<Member> byLoginId = memberRepository.findByLoginId(loginId);
+//        return byLoginId.filter(m -> m.getPassword().equals(password)).orElse(null);
+
+        return memberRepository.findByLoginId(loginId) // optional type으로 return
                 .filter(m -> m.getPassword().equals(password))
                 .orElse(null);
     }

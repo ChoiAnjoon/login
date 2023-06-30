@@ -35,6 +35,7 @@ public class HomeController {
         if (memberId == null) {
             return "home";
         }
+        // cookie의 memberId가 null 이면 로그인이 안된 사용자 임으로 home 화면으로
 
         // 로그인에 성공한 사용자 Cookie가 있는 사용자
         Member loginMember = memberRepository.findById(memberId);
