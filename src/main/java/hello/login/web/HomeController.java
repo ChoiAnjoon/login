@@ -64,7 +64,7 @@ public class HomeController {
 //    @GetMapping("/")
     public String homeLoginV3(HttpServletRequest request, Model model) {
 
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession(false); // 로그인 하지 않는 사용자는 세션을 만들지 않기 위해 false로 둔다.
         if (session == null) {
             return "home";
         }

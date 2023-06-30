@@ -52,6 +52,7 @@ public class LoginCheckFilter implements Filter {
      */
     private boolean isLoginCheckPath(String requestURI) {
         return !PatternMatchUtils.simpleMatch(whilelist, requestURI);
+        // whitelist에 안들어가 있는 것은 false가 되면서 ! 로 true가 된다.
     }
 
 }
