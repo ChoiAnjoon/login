@@ -27,7 +27,7 @@ public class MemberRepository {
 //        List<Member> all = findAll();
 //        for (Member m : all) {
 //            if (m.getLoginId().equals(loginId)) {
-//                return Optional.of(m);
+//                return Optional.of(m); // Optional에 값을 담는다.
 //            }
 //        }
 //        return Optional.empty();
