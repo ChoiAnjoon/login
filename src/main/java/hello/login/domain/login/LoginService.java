@@ -30,6 +30,8 @@ public class LoginService {
 
         return memberRepository.findByLoginId(loginId) // optional type으로 return
                 .filter(m -> m.getPassword().equals(password))
-                .orElse(null);
+                .orElse(null); // optional 객체에서 값 꺼내기
+        // filter로 걸러진 optional들에 저장된 값이 null 이면 null 반환,
+        // null 이 아니면 filter로 걸러진 optional 객체의 값을 그냥 그대로 꺼내서 반환 (여기서는 Member 객체 반환)
     }
 }

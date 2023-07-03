@@ -36,6 +36,7 @@ public class MemberRepository {
         return findAll().stream()
                 .filter(m -> m.getLoginId().equals(loginId))
                 .findFirst(); // 먼저 나오는애 받아다가 바로 반환 --> 반환 타입은 optional
+        // 조건에 맞는 요소 하나를 찾는 것, 조건에 맞는 것이 없을 수 도(null)있기 때문에 Optional 타입으로 반환
     }
 
     public List<Member> findAll() {
